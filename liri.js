@@ -48,11 +48,11 @@ function spotiSearch() {
             }
             let obj = data.tracks.items;
             for (i = 0; i < obj.length; i++) {
-                //console.log(`==========================\n`);
-                //console.log(`Album name: "${obj[i].album.name}"`);
-                //console.log(`Track Title: "${obj[i].name}"`);
-                console.table(`Artists: "${obj[i].album.artists}"`);
-                //console.log(`Spotify URL: "${obj[i].album.href} \n"`);
+                console.log(`==========================\n`);
+                console.log(`Album name: "${obj[i].album.name}"`);
+                console.log(`Track Title: "${obj[i].name}"`);
+                console.log(`Artists: "${obj[i].album.artists[0].name}"`);
+                console.log(`Spotify URL: "${obj[i].album.href}"\n`);
             }
             liri();
         });
