@@ -42,11 +42,17 @@ function spotiSearch() {
             message: "What song do you want to search for?",
         }
     ]).then(function (answer) {
-        spotify.search({ type: 'track', query: answer.songSearch }, function (err, data) {
+        spotify.search({ type: 'track', query: answer.songSearch, limit: 5}, function (err, data) {
             if (err) {
                 return console.log('Error occurred: ' + err);
             }
-            console.log(data);
+            let obj = data.tracks.items;
+            for (i = 0; i < obj.length; i++) {
+                console.log(`==========================\n`);
+                console.log(`Album name: "${obj[i].album.name}"`);
+                console.log(`Track Title: "${obj[i].name}"`);
+                console.log(`Artists: "${obj[i].album.artists.name} \n"`);
+            }
             liri();
         });
     })
@@ -68,5 +74,7 @@ function movieSearch() {
         });
     })
 }
-
+function itSays() {
+    
+}
 liri();
