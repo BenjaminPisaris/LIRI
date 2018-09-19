@@ -1,0 +1,27 @@
+{
+  "name": "liri",
+  "version": "1.0.0",
+  "description": "A command line application that takes in user input using inquire and fetches results from Spotify or OMDB",
+  "main": "liri.js",
+  "dependencies": {
+    "dotenv": "^6.0.0",
+    "fs": "^0.0.1-security",
+    "inquirer": "^6.2.0",
+    "node-spotify-api": "^1.0.7",
+    "request": "^2.88.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BenjaminPisaris/LIRI.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BenjaminPisaris/LIRI/issues"
+  },
+  "homepage": "https://github.com/BenjaminPisaris/LIRI#readme"
+}
